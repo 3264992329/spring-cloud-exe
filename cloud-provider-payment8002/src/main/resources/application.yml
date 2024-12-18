@@ -1,10 +1,10 @@
 server:
-  port: 80
+  port: 8002
 
 # ==========applicationName + druid-mysql8 driver===================
 spring:
   application:
-    name: cloud-consumer-order
+    name: cloud-payment-service
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -12,15 +12,8 @@ spring:
     url: jdbc:mysql://localhost:3306/db2024?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
     username: root
     password: 200231
-  ####Spring Cloud Consul for Service Discovery
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        prefer-ip-address: true #优先使用服务ip进行注册
-        service-name: ${spring.application.name}
-
+  profiles:
+    active: prod # 多环境配置加载内容dev/prod,不写就是默认default配置
 # ========================mybatis===================
 mybatis:
   mapper-locations: classpath:mapper/*.xml

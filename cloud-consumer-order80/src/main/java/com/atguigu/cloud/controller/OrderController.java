@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class OrderController {
-    public static final String PaymentSrv_url = "http://localhost:8001";
+    public static final String PaymentSrv_url = "http://cloud-payment-service";
 
     @Resource
     private RestTemplate restTemplate;
@@ -35,5 +35,11 @@ public class OrderController {
     @GetMapping(value = "/consumer/pay/get/{id}")
     public ResultData getPayInfo(@PathVariable("id") Integer id){
         return restTemplate.getForObject(PaymentSrv_url + "/pay/get/" + id, ResultData.class,id);
+    }
+
+    @GetMapping(value = "/consumer/pay/get/info")
+    private String getInfoByConsul()
+    {
+        return restTemplate.getForObject(PaymentSrv_url + "/pay/get/info", String.class);
     }
 }
