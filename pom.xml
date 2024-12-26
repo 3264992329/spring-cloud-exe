@@ -15,6 +15,8 @@
         <module>cloud-api-commons</module>
         <module>cloud-provider-payment8002</module>
         <module>cloud-consumer-feign-order80</module>
+        <module>cloud-geteway9527</module>
+        <module>exercise</module>
     </modules>
 
     <properties>
@@ -125,6 +127,7 @@
                 <scope>test</scope>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
 </project>
 
