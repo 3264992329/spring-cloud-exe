@@ -10,6 +10,7 @@
         <module name="cloud-geteway9527" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-api-commons" />
+        <module name="cloudalibaba-consumer-nacos-order83" />
         <module name="cloud-provider-payment8001" />
         <module name="exercise" />
         <module name="mybatis_generator2024" />

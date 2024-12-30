@@ -17,6 +17,7 @@
         <module>cloud-consumer-feign-order80</module>
         <module>cloud-geteway9527</module>
         <module>exercise</module>
+        <module>cloudalibaba-consumer-nacos-order83</module>
     </modules>
 
     <properties>
